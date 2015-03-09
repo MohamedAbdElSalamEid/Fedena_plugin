@@ -1,0 +1,42 @@
+
+<div>    
+    <h1>Insert Student</h1>
+
+    <% form_for :student, :url=>{:controller=>"hello", :action=>"create"}, :html => { :multipart => true, :method => :post } do |f| -%>
+
+      <label for="first_name"><%= t('first_name') %> <span class="necessary-field">*</span> </label>
+      <%= f.text_field :first_name -%>
+      
+      <br>
+
+      <label for="last_name"><%= t('last_name') %> <span class="necessary-field">*</span> </label>
+      <%= f.text_field :last_name -%>
+      
+      <br>
+      
+      <label for="admission_number"><%= t('admission_number') %> <span class="necessary-field">*</span> </label>
+      <%= f.text_field :admission_no -%>
+      
+      <br>
+
+      <label for="admission_date"><%= t('admission_date') %> <span class="necessary-field">*</span> </label>
+      <%= f.text_field :admission_date -%>
+      
+      <br>
+
+      <label for="birth_date"><%= t('birth_date') %> <span class="necessary-field">*</span> </label>
+      <%= f.text_field :date_of_birth -%>
+      
+      <br>
+      
+      <label for="batch_id"><%= t('batch_id') %> <span class="necessary-field">*</span> </label>
+      <%= f.text_field :batch_id -%>
+      
+      <br>
+     
+    
+      
+      <%= f.submit -%>
+    <% end %>
+
+</div>

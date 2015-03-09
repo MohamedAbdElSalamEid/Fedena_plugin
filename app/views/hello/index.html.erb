@@ -1,0 +1,75 @@
+<h1>Hello Star</h1>
+
+<h1>Listing students</h1>
+
+<table>
+<tr>
+<th>id</th>
+<th>first_name</th>
+<th>last_name</th>
+<th>batch_id</th>
+
+</tr>
+
+<% @students.each do |student| %>
+<tr>
+<td><%= student.first_name %></td>
+<td><%= student.last_name %></td>
+<td><%= student.batch_id %></td>
+>
+</tr>
+<% end %>
+</table>
+
+<hr>
+
+<div>
+
+<%# form_for :dump, :url=>{:controller=>"hello", :action=>"student_import"}, :html => { :multipart => true } do |f| -%>
+
+
+<%#*Select an Excel File :%>
+<%#= f.file_field :excel_file -%>
+<%#= submit_tag 'Submit' -%>
+<%# end %>
+
+<%#*</div>%>
+
+<%#*<div>%>
+
+    <%#*<h1>Insert Student</h1>%> 
+
+    <%# form_for :student, :url=>{:controller=>"hello", :action=>"create"}, :html => { :multipart => true, :method => :post } do |f| -%>
+
+      <%#*<label for="first_name"><%= t('first_name') %> <span class="necessary-field">*</span> </label>%>
+      <%#= f.text_field :first_name -%>
+      <%#*<br>%>
+
+      <%#*<label for="last_name"><%= t('last_name') %> <span class="necessary-field">*</span> </label>%>
+      <%#= f.text_field :last_name -%>
+
+      <%#*<br>%>
+
+      <%#*<label for="admission_number"><%= t('admission_number') %> <span class="necessary-field">*</span> </label>%>
+      <%#= f.text_field :admission_no -%>
+
+      <%#*<br>%>
+
+      <%#*<label for="admission_date"><%= t('admission_date') %> <span class="necessary-field">*</span> </label>%>
+      <%#= f.text_field :admission_date -%>
+
+      <%#*<br>%>
+
+      <%#*<label for="birth_date"><%= t('birth_date') %> <span class="necessary-field">*</span> </label>%>
+      <%#= f.text_field :date_of_birth -%>
+
+      <%#*<br>%>
+      
+      <%#*<label for="batch_id"><%= t('batch_id') %> <span class="necessary-field">*</span> </label>%>
+      <%#= f.text_field :batch_id -%>
+     
+
+      <%#= f.submit -%>
+    <%# end %>
+
+<%#*</div>%>
