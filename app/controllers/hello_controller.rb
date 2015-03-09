@@ -35,15 +35,11 @@ class HelloController < ApplicationController
     @student = Student.new(params[:student])
     #puts @student
     if @student.save
-      flash[:notice] = "Success"
-
       redirect_to 'http://www.google.com'
 
     else
       
-      #redirect_to 'http://www.google.com'
-      #render 'index'
-      #render 'new'
+      render 'new'
 
     end
   end
