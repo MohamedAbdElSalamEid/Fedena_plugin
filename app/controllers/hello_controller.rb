@@ -40,7 +40,7 @@ class HelloController < ApplicationController
       redirect_to 'http://www.google.com'
 
     else
-      @student.errors.full_messages
+      
       #redirect_to 'http://www.google.com'
       #render 'index'
       #render 'new'
